@@ -49,8 +49,10 @@ body {
     font-weight: 400;
     font-size: 100%;
     line-height: 1.4;
-    color: darkblue;
+    color: #011627;
     background-color: #fdfffc;
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -90,7 +92,81 @@ a {
 
 a:hover {
     text-shadow: 1px 1px 2px rgba(0,0,0,.5);
-    border-bottom:2px solid red;
+    /*border-bottom:2px solid red;*/
+}
+
+main {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/**********************************************
+                     FOOTER
+**********************************************/
+footer {
+    padding-top: 50px;
+    text-align: center;
+}
+footer img {
+    width:50px;
+    filter:grayscale(1);
+}
+footer a:hover img {
+    transition: filter 500ms linear;
+    filter: grayscale(0);
+}
+
+footer li:nth-child(2){
+    margin-left: 30px;
+}
+
+/**********************************************
+                     HEADER
+**********************************************/
+header{
+    text-align: center;
+    background-color: #011627;
+    padding-top: 5px;
+    margin-bottom: 30px;
+}
+a div:first-child {
+    font-family: "Changa One",sans-serif;
+    font-size: 1.75rem;
+    line-height: 0.8;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+a div:nth-child(2) {
+    margin: -5px;
+}
+header nav li:first-child {
+    display: none;
+}
+nav li {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+header nav {
+    margin-top:20px;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+nav ul {
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+header nav li:nth-child(2) a{
+    margin-right: 30px;
+}
+header nav a {
+    font-weight: 800;
+    padding: 15px 10px;
+    color: white;
+}
+nav a:hover {
+    color: #2ec4b6;
 }
 /**********************************************
                 PAGE ACCUEIL
@@ -99,7 +175,6 @@ a:hover {
     color: yellow;
 }
 
-
 /**********************************************
                 PAGE CONTACT
 **********************************************/
@@ -107,10 +182,38 @@ a:hover {
     color: red;
 }
 
-
+.page-contact header ul li:nth-child(3) a{
+    color: #2ec4b6;
+}
 /**********************************************
                 PAGE INFO
 **********************************************/
+.page-info header ul li:nth-child(2) a{
+    color: #2ec4b6;
+}
+
+.page-info main img {
+    border-radius: 50%;
+    width: 30vw;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
 .page-info h1 {
-    color: aqua;
+    text-align: center;
+}
+
+.page-info img + h1 {
+    margin-bottom: -17px;
+}
+
+.page-info main {
+    text-align: center;
+}
+
+.page-info main p {
+    text-align: left;
+}
+.page-info h1 + h1{
+    margin-bottom: -1px;
 }
