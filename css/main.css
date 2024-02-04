@@ -135,9 +135,11 @@ a div:first-child {
     line-height: 0.8;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    color: #2ec4b6;
 }
 a div:nth-child(2) {
     margin: -5px;
+    font-size: 1.5em;
 }
 header nav li:first-child {
     display: none;
