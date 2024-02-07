@@ -116,8 +116,8 @@ footer a:hover img {
     filter: grayscale(0);
 }
 
-footer li:nth-child(2){
-    margin-left: 30px;
+footer li{
+    margin:0 15px;
 }
 
 /**********************************************
@@ -126,29 +126,32 @@ footer li:nth-child(2){
 header{
     text-align: center;
     background-color: #011627;
-    padding-top: 5px;
-    margin-bottom: 30px;
+    padding: 5px 30px;
+    margin-bottom: 20px;
 }
-a div:first-child {
-    font-family: "Changa One",sans-serif;
+.personne {
     font-size: 1.75rem;
     line-height: 0.8;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     color: #2ec4b6;
+    font-family: 'Changa One', sans-serif;
+    font-weight: 400;
+    margin: 1rem 0;
 }
-a div:nth-child(2) {
+.metier {
     margin: -5px;
-    font-size: 1.5em;
 }
-header nav li:first-child {
+
+header .accueil {
     display: none;
 }
+
 nav li {
     list-style-type: none;
     padding: 0;
     display: inline-block;
+    margin:0 10px;
 }
+
 header nav {
     margin-top:20px;
     padding-top: 10px;
@@ -156,43 +159,29 @@ header nav {
 }
 nav ul {
     padding: 0;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-header nav li:nth-child(2) a{
-    margin-right: 30px;
+    margin: 0;
 }
 header nav a {
     font-weight: 800;
     padding: 15px 10px;
     color: white;
+    display: inline-block;
 }
-nav a:hover {
+nav a:hover,
+nav a.actif {
     color: #2ec4b6;
 }
 /**********************************************
                 PAGE ACCUEIL
 **********************************************/
-.page-accueil h1 {
-    color: yellow;
-}
 
 /**********************************************
                 PAGE CONTACT
 **********************************************/
-.page-contact h1 {
-    color: red;
-}
 
-.page-contact header ul li:nth-child(3) a{
-    color: #2ec4b6;
-}
 /**********************************************
                 PAGE INFO
 **********************************************/
-.page-info header ul li:nth-child(2) a{
-    color: #2ec4b6;
-}
 
 .page-info main img {
     border-radius: 50%;
