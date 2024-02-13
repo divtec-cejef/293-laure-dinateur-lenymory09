@@ -1,6 +1,6 @@
-/**********************************************
-                      FONTS
-**********************************************/
+/*************************************
+                FONTS
+ ************************************/
 /* open-sans-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -36,10 +36,9 @@
     src: url('../fonts/changa-one-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
-/**********************************************
-                Règles générales
-**********************************************/
+/*************************************
+            Règles Générales
+ ************************************/
 * {
     box-sizing: border-box;
 }
@@ -52,7 +51,6 @@ body {
     color: #011627;
     background-color: #fdfffc;
     margin: 0;
-    padding: 0;
 }
 
 img {
@@ -67,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Changa One", sans-serif;
+    font-family: 'Changa One', sans-serif;
     font-weight: 400;
 }
 
@@ -78,7 +76,7 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    margin-bottom:.75em;
+    margin-bottom: .75em;
 }
 
 p {
@@ -91,45 +89,46 @@ a {
 }
 
 a:hover {
+    /*border-bottom: 2px solid #e71d36;*/
     text-shadow: 1px 1px 2px rgba(0,0,0,.5);
-    /*border-bottom:2px solid red;*/
 }
 
-main {
-    margin-right: 5%;
-    margin-left: 5%;
-}
-
-/**********************************************
-                     FOOTER
-**********************************************/
-footer {
-    padding-top: 50px;
-    text-align: center;
-}
-footer img {
-    width:50px;
-    filter:grayscale(1);
-}
-footer a:hover img {
-    transition: filter 500ms linear;
-    filter: grayscale(0);
-}
-
-footer li{
-    margin:0 15px;
-}
-
-/**********************************************
-                     HEADER
-**********************************************/
-header{
-    text-align: center;
+/*************************************
+            ENTÊTE DU SITE
+ ************************************/
+header {
     background-color: #011627;
+    text-align: center;
     padding: 5px 30px;
-    margin-bottom: 20px;
 }
-.personne {
+
+header ul {
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.accueil {
+    display: none;
+}
+
+header ul li a {
+    padding: 5px 10px;
+    display: inline-block;
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    color: #fdfffc;
+}
+
+header ul li a:hover,
+header ul li a.actif {
+    color: #2ec4b6;
+}
+
+header .personne {
     font-size: 1.75rem;
     line-height: 0.8;
     color: #2ec4b6;
@@ -137,74 +136,68 @@ header{
     font-weight: 400;
     margin: 1rem 0;
 }
-.metier {
-    margin: -5px;
+
+header .metier {
+    margin-top: -5px;
 }
 
-header .accueil {
-    display: none;
+/*************************************
+            FOOTER
+ ************************************/
+
+footer {
+    text-align: center;
+    padding: 50px 0 0; /* 50px en haut */
 }
 
-nav li {
-    list-style-type: none;
-    padding: 0;
-    display: inline-block;
-    margin:0 10px;
+footer nav {
+    margin-bottom: 1rem;
 }
 
-header nav {
-    margin-top:20px;
-    padding-top: 10px;
-    padding-bottom:10px;
-}
-nav ul {
+footer ul {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
-header nav a {
-    font-weight: 800;
-    padding: 15px 10px;
-    color: white;
+
+footer ul li {
     display: inline-block;
 }
-nav a:hover,
-nav a.actif {
-    color: #2ec4b6;
-}
-/**********************************************
-                PAGE ACCUEIL
-**********************************************/
 
-/**********************************************
-                PAGE CONTACT
-**********************************************/
+footer ul li img {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
 
-/**********************************************
-                PAGE INFO
-**********************************************/
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
 
-.page-info main img {
-    border-radius: 50%;
-    width: 30vw;
-    margin-top: -5px;
-    margin-bottom: -5px;
+    -webkit-transition: -webkit-filter 500ms linear;
+    transition: filter 500ms linear;
 }
 
-.page-info h1 {
-    text-align: center;
+footer ul li img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 
-.page-info img + h1 {
-    margin-bottom: -17px;
+/*************************************
+            PAGE ACCUEIL
+ ************************************/
+.page-accueil h1 {
+    color: yellow;
 }
 
-.page-info main {
-    text-align: center;
+/*************************************
+            PAGE CONTACT
+ ************************************/
+.page-contact h1 {
+    color: red;
 }
 
-.page-info main p {
-    text-align: left;
-}
-.page-info h1 + h1{
-    margin-bottom: -1px;
+/*************************************
+            PAGE INFO
+ ************************************/
+.page-infos h1 {
+    color: aqua;
 }
