@@ -27,6 +27,7 @@
     font-weight: 800;
     src: url('../fonts/open-sans-v40-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* changa-one-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -90,7 +91,7 @@ a {
 
 a:hover {
     /*border-bottom: 2px solid #e71d36;*/
-    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 }
 
 /*************************************
@@ -141,6 +142,15 @@ header .metier {
     margin-top: -5px;
 }
 
+
+/*************************************
+                 MAIN
+ ************************************/
+main {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 /*************************************
             FOOTER
  ************************************/
@@ -185,19 +195,70 @@ footer ul li img:hover {
             PAGE ACCUEIL
  ************************************/
 .page-accueil h1 {
-    color: yellow;
+    text-align: center;
+}
+.page-accueil .list-realisations {
+    /*Reset style liste*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*Affichage flex*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Eléments du container FLEX */
+.page-accueil .list-realisations li {
+    flex: 1 1 50%;
+    padding: 1rem 2.5%;
+}
+
+/* Supprimer des marges des figures */
+.page-accueil .list-realisations figure {
+    margin: 0;
+}
+
+.page-accueil .list-realisations figure {
+    color: #011627;
+    background-color: #e7e9eb;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-accueil .list-realisations figcaption {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.page-accueil .list-realisations figure:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 /*************************************
             PAGE CONTACT
  ************************************/
-.page-contact h1 {
-    color: red;
+.contacts li {
+    display: list-item;
 }
+
+/*.contacts li:nth-child(1) {
+    list-style-image: url("img/phone.png");
+}
+.contacts li:nth-child(2) {
+    list-style-image: url("img/mail.png");
+}
+.contacts li:nth-child(3) {
+    list-style-image: url("img/twitter.png");
+}
+.contacts li:nth-child(4) {
+    list-style-image: url("img/facebook.png");
+}*/
 
 /*************************************
             PAGE INFO
  ************************************/
-.page-infos h1 {
-    color: aqua;
+.page-info .photo-laure {
+    border-radius: 50%;
+    width: 75px;
+    margin-left: auto;
+    margin-right: auto;
 }
