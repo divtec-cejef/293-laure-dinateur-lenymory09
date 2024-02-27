@@ -52,8 +52,11 @@ body {
     color: #011627;
     background-color: #fdfffc;
     margin: 0;
+    text-align: center;
 }
-
+main {
+    width: 100%;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -84,6 +87,11 @@ p {
     line-height: 1.5;
 }
 
+p,
+li {
+    text-align: left;
+}
+
 a {
     color: #e71d36;
     text-decoration: none;
@@ -112,7 +120,7 @@ header ul li {
     margin: 0 15px;
 }
 
-.accueil {
+header .accueil {
     display: none;
 }
 
@@ -174,6 +182,10 @@ footer ul li {
     display: inline-block;
 }
 
+footer p {
+    text-align: center;
+}
+
 footer ul li img {
     width: 50px;
     height: 50px;
@@ -209,7 +221,7 @@ footer ul li img:hover {
 
 /* Eléments du container FLEX */
 .page-accueil .list-realisations li {
-    flex: 1 1 50%;
+    flex: 0 1 50%;
     padding: 1rem 2.5%;
 }
 
@@ -239,26 +251,91 @@ footer ul li img:hover {
 .contacts li {
     display: list-item;
 }
-
-/*.contacts li:nth-child(1) {
-    list-style-image: url("img/phone.png");
+/*
+.contacts li:nth-child(1) {
+    list-style-image: url("../img/phone.png");
 }
 .contacts li:nth-child(2) {
-    list-style-image: url("img/mail.png");
+    list-style-image: url("../img/mail.png");
 }
 .contacts li:nth-child(3) {
-    list-style-image: url("img/twitter.png");
+    list-style-image: url("../img/twitter.png");
 }
 .contacts li:nth-child(4) {
-    list-style-image: url("img/facebook.png");
-}*/
-
+    list-style-image: url("../img/facebook.png");
+}
+*/
 /*************************************
             PAGE INFO
  ************************************/
 .page-info .photo-laure {
     border-radius: 50%;
-    width: 75px;
-    margin-left: auto;
+    max-width: 150px;
+    margin: 10px auto 10px;
+}
+
+/*************************************
+              RESPONSIVE
+ ************************************/
+/* pour les écrans de minimum 480px de large*/
+@media screen and (min-width: 480px) {
+    .page-accueil .list-realisations li{
+        flex:0 1 calc(100%/3);
+    }
+    .page-info .photo-laure {
+        float:left;
+        margin: 10px;
+    }
+    .page-contact main {
+        display: flex;
+        flex-direction: column;
+    }
+    .page-contact .container-page-contact {
+        display: flex;
+    }
+    .page-contact .container-page-contact section.info {
+        width: 50%;
+    }
+    .page-contact .container-page-contact section.contacts {
+        width: 40%;
+        padding-left: 10%;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    header {
+        border-bottom: 5px solid #2ec4b6;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    header > a {
+        width: 42%;
+        text-align: left;
+    }
+    header a div.personne {
+        font-size: 2.5rem;
+    }
+
+    header a div.metier {
+        margin-bottom: 20px;
+    }
+    header nav {
+        width: 48%;
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (min-width: 910px) {
+    header .accueil {
+        display: inline-block;
+    }
+}
+
+main,
+footer {
     margin-right: auto;
+    margin-left: auto;
+    max-width: calc(910px - 5%);
 }
